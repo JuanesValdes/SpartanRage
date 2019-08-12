@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animation2DIdleWalkJump : MonoBehaviour
+public class Character : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
@@ -34,10 +34,10 @@ public class Animation2DIdleWalkJump : MonoBehaviour
         if (rb.velocity.y == 0)
         {
             anim.SetBool("isJumping", false);
-            anim.SetBool("isFalling", true);
+            anim.SetBool("isFalling", false);
         }
         if (rb.velocity.y> 0)
-            anim.SetBool("isJumping",false);
+            anim.SetBool("isJumping",true);
 
         if (rb.velocity.y > 0)
         {
