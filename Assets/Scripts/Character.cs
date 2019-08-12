@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
     {
         dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
         if (Input.GetButtonDown("Jump") && rb.velocity.y == 0)
-            rb.AddForce(Vector2.up * 700f);
+            rb.AddForce(Vector2.up * 250f);
 
         if (Mathf.Abs(dirX) > 0 && rb.velocity.y == 0)
             anim.SetBool("isRunning", true);

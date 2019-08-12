@@ -7,7 +7,7 @@ public class Rings : MonoBehaviour
     public int pointsToAdd;
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name=="Sanic")
+        if (other.gameObject.name=="Character")
         {
             Puntaje.AddPoints(pointsToAdd);
             Destroy(gameObject);
